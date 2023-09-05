@@ -1,3 +1,12 @@
+import { Link } from "react-router-dom";
+import "../assets/style/card.scss";
+
 export default function Card({ title }) {
-  return <h2>{title}</h2>;
+  return (
+    <div className="article">
+      <Link to={`/location/${title}`}>
+        <h2 className="article-title">{title}</h2>
+      </Link>
+    </div>
+  );
 }

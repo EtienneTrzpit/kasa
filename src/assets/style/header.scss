@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 50px;
+
+  &__nav ul {
+    display: flex;
+    list-style: none;
+  }
+
+  &__nav li {
+    margin-right: 40px;
+  }
+
+  &__nav a {
+    color: #ff6060;
+    text-decoration: none;
+  }
+
+  &__nav {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+}
