@@ -1,7 +1,17 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Banner2 from "../components/Banner2";
+import MainAbout from "../components/MainAbout";
+
 export default function About() {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Banner2 />
+        <MainAbout />
+      </main>
+      <Footer />
+    </>
   );
 }

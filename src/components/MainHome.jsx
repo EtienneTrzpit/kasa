@@ -4,10 +4,10 @@ import "../assets/style/card.scss";
 
 export default function MainHome() {
   return (
-    <main className="articles">
+    <div className="articles">
       {logements.map((logement) => (
         <Card title={logement.title} />
       ))}
-    </main>
+    </div>
   );
 }
