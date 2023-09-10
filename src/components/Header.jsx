@@ -10,12 +10,12 @@ export default function Header() {
       <div className="header__nav">
         <ul>
           <li>
-            <NavLink to="/" exact activeClassName="selected">
+            <NavLink to="/" exact="true" activeclassname="selected">
               Accueil
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" activeClassName="selected">
+            <NavLink to="/about" activeclassname="selected">
               A propos
             </NavLink>
           </li>

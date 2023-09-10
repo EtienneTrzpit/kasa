@@ -20,7 +20,7 @@ export default function MainAbout() {
   return (
     <div className="accordions">
       {accordionTitle.map((title, index) => (
-        <div className={selected === index ? "accordion show" : "accordion"}>
+        <div className="accordion" key={title}>
           <div className="accordion-title">
             {title}
             <span
@@ -29,15 +29,7 @@ export default function MainAbout() {
             ></span>
           </div>
           <div className={selected === index ? "wrapper is-open" : "wrapper"}>
-            <div
-              className={
-                selected === index
-                  ? "accordion-content show"
-                  : "accordion-content hide"
-              }
-            >
-              {accordionContent[index]}
-            </div>
+            <div className="accordion-content">{accordionContent[index]}</div>
           </div>
         </div>
       ))}

@@ -6,7 +6,7 @@ export default function MainHome() {
   return (
     <div className="articles">
       {logements.map((logement) => (
-        <Card title={logement.title} />
+        <Card title={logement.title} key={logement.title} />
       ))}
     </div>
   );

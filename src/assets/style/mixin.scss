@@ -1,0 +1,25 @@
+@mixin banner() {
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+  border-radius: 25px;
+  mix-blend-mode: darken;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 68.448px */
+  letter-spacing: 0.05em;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  /* aligner verticalement texte */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -3,10 +3,10 @@ import "../assets/style/card.scss";
 
 export default function Card({ title }) {
   return (
-    <div className="article">
-      <Link to={`/location/${title}`}>
+    <Link to={`/location/${title}`}>
+      <div className="article">
         <h2 className="article-title">{title}</h2>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
