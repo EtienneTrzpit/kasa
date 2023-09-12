@@ -1,0 +1,24 @@
+.location-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.picture {
+  background-color: #c4c4c4;
+  border-radius: 50%;
+  width: 64px;
+}
+
+.info-divided {
+  display: flex;
+  align-items: center;
+}
+
+.list-info {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
