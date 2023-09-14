@@ -1,6 +1,7 @@
 import logements from "../data/logements.json";
 import { useParams } from "react-router-dom";
 import "../assets/style/info.scss";
+import Accordion from "./Accordion";
 
 export default function MainLocation() {
   const { id } = useParams();
@@ -13,9 +14,9 @@ export default function MainLocation() {
   }
   return (
     <>
-      <div className="location-info">
-        <h1>{logementSelectionne.title}</h1>
-        <span className="info-divided">
+      <div className="location-info location-presentation">
+        <h1 className="location-title">{logementSelectionne.title}</h1>
+        <span className="landlord">
           <p>{logementSelectionne.host["name"]}</p>
           <img
             className="picture"
@@ -38,16 +39,37 @@ export default function MainLocation() {
           {/* boucle pour afficher les étoiles remplis correspondant au rating du logement */}
           {Array.from({ length: logementSelectionne.rating }).map(
             (_, index) => (
-              <span key={index}>&#9733;</span>
+              <span key={index} className="star filled">
+                &#9733;
+              </span>
             )
           )}
           {/* boucle pour afficher les étoiles vides correspondant au rating du logement */}
           {Array.from({ length: 5 - logementSelectionne.rating }).map(
             (_, index) => (
-              <span key={index}>&#9734;</span>
+              <span key={index} className="star empty">
+                &#9734;
+              </span>
             )
           )}
         </span>
+      </div>
+      <div className="location-info location-accordions">
+        <Accordion
+          accordionTitle={["Description"]}
+          accordionContent={[logementSelectionne.description]}
+        />
+        <Accordion
+          accordionTitle={["Équipements"]}
+          accordionContent={
+            <ul className="list-equipements">
+              {/* boucle sur les équipements du logement pour les afficher */}
+              {logementSelectionne.equipments.map((equipment, index) => {
+                return <li key={index}>{equipment}</li>;
+              })}
+            </ul>
+          }
+        />
       </div>
     </>
   );

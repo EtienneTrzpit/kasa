@@ -1,9 +1,47 @@
 .location-info {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin-left: 70px;
   margin-right: 70px;
+
+  & > p {
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%; /* 25.668px */
+    margin-top: -1.5em;
+  }
+  & .accordion {
+    width: 45%;
+  }
+  & .accordion-content {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.location-presentation {
+  margin-top: -30px;
+}
+
+.location-title {
+  color: #ff6060;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 51.336px */
+  margin-top: 0.5em;
+}
+
+.location-accordions {
+  margin-top: -1em;
+  & .accordion-title {
+    font-size: 18px;
+  }
 }
 
 .picture {
@@ -12,13 +50,60 @@
   width: 64px;
 }
 
-.info-divided {
+.landlord {
   display: flex;
   align-items: center;
+  color: #ff6060;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 25.668px */
+  & > p {
+    margin-right: 10px;
+    width: 4em;
+  }
 }
 
 .list-info {
+  margin-left: -40px;
+  margin-top: 0;
   display: flex;
   align-items: center;
   list-style-type: none;
+  & > li {
+    margin-right: 10px;
+    padding: 3px 40px;
+    border-radius: 10px;
+    background: #ff6060;
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%; /* 19.964px */
+  }
+}
+
+.list-equipements {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+}
+
+.star {
+  font-size: 32px;
+  margin-left: 10px;
+  &,
+  .filled {
+    color: red;
+  }
+  &,
+  .empty {
+    color: #ff6060;
+  }
 }

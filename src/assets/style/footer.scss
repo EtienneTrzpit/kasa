@@ -1,9 +1,17 @@
 .footer-container {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+  width: 100%;
   background-color: black;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
+}
+
+.home + .footer-container {
+  position: relative;
 }
