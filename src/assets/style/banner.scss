@@ -9,6 +9,8 @@
   }
   &__location {
     @include banner;
-    background-image: url("../images/location.svg");
+    width: 93%;
+    object-fit: cover;
+    margin-bottom: 1em;
   }
 }

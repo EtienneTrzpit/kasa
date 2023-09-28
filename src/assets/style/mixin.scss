@@ -15,11 +15,19 @@
   font-weight: 500;
   line-height: 142.6%; /* 68.448px */
   letter-spacing: 0.05em;
-  margin-bottom: 50px;
-  margin-top: 50px;
   /* aligner verticalement texte */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@mixin error() {
+  color: #ff6060;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 25.668px */
 }

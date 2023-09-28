@@ -1,3 +1,5 @@
+@import "./mixin.scss";
+
 .location-info {
   display: flex;
   align-items: flex-start;
@@ -88,6 +90,8 @@
 }
 
 .list-equipements {
+  margin-left: -40px;
+  margin-top: 0;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -106,4 +110,24 @@
   .empty {
     color: #ff6060;
   }
+}
+
+.error-title {
+  @include error;
+  font-size: 188px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.error-description {
+  @include error;
+  font-size: 34px;
+  margin-top: -50px;
+}
+
+.error-link {
+  @include error;
+  margin-top: 10px;
+  text-decoration: underline;
+  margin-left: 850px;
 }

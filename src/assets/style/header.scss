@@ -31,4 +31,8 @@
     justify-items: center;
     align-items: center;
   }
+
+  & .active {
+    text-decoration: underline;
+  }
 }
