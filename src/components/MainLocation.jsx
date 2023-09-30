@@ -3,16 +3,20 @@ import { NavLink, useParams } from "react-router-dom";
 import "../assets/style/info.scss";
 import "../assets/style/banner.scss";
 import Accordion from "./Accordion";
+import ImageSlider from "./ImageSlider";
 
 export default function MainLocation() {
   const { id } = useParams();
   let logementSelectionne = null;
+  let images;
   // boucle sur le tableau logements pour trouver le logement dont l'id correspond à celui passé dans l'url
   for (let logement of logements) {
     if (logement.title === id) {
       logementSelectionne = logement;
+      images = logement.pictures;
     }
   }
+
   // si aucun logement n'est trouvé, on affiche un message d'erreur
   if (logementSelectionne === null) {
     return (
@@ -31,11 +35,9 @@ export default function MainLocation() {
   else {
     return (
       <>
-        <img
-          className="banner__location"
-          src={logementSelectionne.cover}
-          alt={logementSelectionne.title}
-        />
+        <div id="banner">
+          <ImageSlider images={images} />
+        </div>
         <div className="location-info location-presentation">
           <h1 className="location-title">{logementSelectionne.title}</h1>
           <span className="landlord">
