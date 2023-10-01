@@ -34,7 +34,6 @@ export default function ImageSlider({ images }) {
           src={images[currentImage]}
           alt="logement"
         />
-        );
       </>
     );
   }

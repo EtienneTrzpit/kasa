@@ -15,3 +15,16 @@
 .home + .footer-container {
   position: relative;
 }
+
+@media (max-width: 768px) {
+  .footer-container {
+    position: relative;
+    width: 104%;
+    &__copyrights {
+      text-align: center;
+      margin-left: 8em;
+      margin-right: 8em;
+      margin-bottom: 1em;
+    }
+  }
+}
