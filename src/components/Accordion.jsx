@@ -15,8 +15,12 @@ export default function Accordion({ accordionTitle, accordionContent }) {
           onClick={() => toggle()}
         ></span>
       </div>
-      <div className={selected === 0 ? "wrapper is-open" : "wrapper"}>
-        <div className="accordion-content">{accordionContent}</div>
+      <div
+        className={
+          selected === 0 ? "accordion-content is-open" : "accordion-content"
+        }
+      >
+        {accordionContent}
       </div>
     </div>
   );

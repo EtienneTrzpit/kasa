@@ -1,6 +1,6 @@
 .footer-container {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  margin-top: 4em;
   padding-bottom: 10px;
   width: 100%;
   background-color: black;
@@ -9,7 +9,13 @@
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 60px;
+  &__logo {
+    margin-bottom: 0.7em;
+  }
+  &__copyrights {
+    font-size: 18px;
+  }
 }
 
 .home + .footer-container {
@@ -18,7 +24,6 @@
 
 @media (max-width: 768px) {
   .footer-container {
-    position: relative;
     width: 104%;
     &__copyrights {
       text-align: center;
