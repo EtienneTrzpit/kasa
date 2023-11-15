@@ -3,9 +3,12 @@
 .banner {
   @include banner;
   background-image: url("../images/adventure.png");
+  filter: brightness(0.8);
+  text-shadow: 0 1px 1px #fff;
   &__2 {
     @include banner;
     background-image: url("../images/mountain.png");
+    filter: brightness(0.8);
   }
   &__location {
     @include banner;

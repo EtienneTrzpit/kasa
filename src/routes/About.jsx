@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <Header />
-      <main>
+      <main className="mainAbout">
         <Banner2 />
         <MainAbout />
       </main>

@@ -18,8 +18,9 @@
   }
 }
 
-.home + .footer-container {
-  position: relative;
+.mainAbout + .footer-container {
+  height: 202px;
+  margin-top: 15px;
 }
 
 @media (max-width: 768px) {

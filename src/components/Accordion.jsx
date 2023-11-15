@@ -7,7 +7,10 @@ export default function Accordion({ accordionTitle, accordionContent }) {
     selected === null ? setSelected(0) : setSelected(null);
   };
   return (
-    <div className="accordion" key={accordionTitle}>
+    <div
+      className={selected === 0 ? "accordion active" : "accordion"}
+      key={accordionTitle}
+    >
       <div className="accordion-title">
         {accordionTitle}
         <span
@@ -15,13 +18,7 @@ export default function Accordion({ accordionTitle, accordionContent }) {
           onClick={() => toggle()}
         ></span>
       </div>
-      <div
-        className={
-          selected === 0 ? "accordion-content is-open" : "accordion-content"
-        }
-      >
-        {accordionContent}
-      </div>
+      <div className="accordion-content">{accordionContent}</div>
     </div>
   );
 }

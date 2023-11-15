@@ -59,7 +59,7 @@ export default function MainLocation() {
               return <li key={tag}>{tag}</li>;
             })}
           </ul>
-          <span>
+          <span className="rating">
             {/* boucle pour afficher les étoiles remplis correspondant au rating du logement */}
             {Array.from({ length: logementSelectionne.rating }).map(
               (_, index) => (
