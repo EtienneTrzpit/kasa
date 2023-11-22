@@ -26,11 +26,16 @@
 @media (max-width: 768px) {
   .footer-container {
     width: 104%;
+    margin-top: 0;
     &__copyrights {
       text-align: center;
       margin-left: 8em;
       margin-right: 8em;
       margin-bottom: 1em;
     }
+  }
+
+  .main-location + .footer-container {
+    margin-top: 1em;
   }
 }

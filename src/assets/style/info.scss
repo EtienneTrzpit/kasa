@@ -118,7 +118,8 @@
 .error-description {
   @include error;
   font-size: 34px;
-  margin-top: -50px;
+  margin-top: -100px;
+  margin-bottom: 225px;
 }
 
 .error-link {
@@ -170,14 +171,16 @@
     margin-left: 20px;
     margin-right: 10px;
     margin-top: -1em;
-
     & > p {
-      margin-top: 0;
+      position: absolute;
+      top: 28em;
     }
     & .accordion {
+      margin-top: -0.5em;
       width: 95%;
       & + .accordion {
-        margin-bottom: 1em;
+        margin-bottom: 2em;
+        margin-top: 0.5em;
       }
     }
     & .accordion-content {
@@ -196,7 +199,9 @@
   }
 
   .location-accordions {
-    margin-top: 0;
+    /*position: absolute;
+    top: 38em;*/
+    padding-top: 13em;
     display: flex;
     flex-direction: column;
     & .accordion-title {
@@ -217,7 +222,8 @@
   }
 
   .list-info {
-    margin-top: 1em;
+    position: absolute;
+    top: 32em;
     margin-left: -2.5em;
     margin-bottom: 4em;
     flex-flow: row wrap;
@@ -237,18 +243,13 @@
     }
   }
 
-  .list-equipements {
-    margin-left: 0;
-    margin-top: 0;
-  }
-
   .error-title {
     font-size: 100px;
     margin-top: 30px;
   }
   .landlord {
     position: absolute;
-    top: 26em;
+    top: 29.8em;
     left: 11.7em;
     z-index: 100;
     & p {
@@ -256,9 +257,13 @@
     }
   }
 
+  .banner-text {
+    display: none;
+  }
+
   .arrow {
     padding: 9px;
-    top: 12em;
+    top: 14em;
   }
   .left {
     left: 3em;
@@ -268,7 +273,7 @@
   }
   .star {
     position: absolute;
-    top: 18.3em;
+    top: 21em;
     left: 0.5em;
     font-size: 26px;
     z-index: 100;

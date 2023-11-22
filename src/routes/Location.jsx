@@ -6,7 +6,7 @@ export default function Location() {
   return (
     <>
       <Header />
-      <main>
+      <main className="main-location">
         <MainLocation />
       </main>
       <Footer />
