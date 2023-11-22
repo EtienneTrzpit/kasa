@@ -24,8 +24,8 @@ export default function ImageSlider({ images }) {
   } else {
     return (
       <>
-        <span className="arrow left" onClick={previousSlide}></span>
-        <span className="arrow right" onClick={nextSlide}></span>
+        <span className="arrow-diaporama left" onClick={previousSlide}></span>
+        <span className="arrow-diaporama right" onClick={nextSlide}></span>
         <p className="banner-text">
           {currentImage + 1}/{images.length}
         </p>

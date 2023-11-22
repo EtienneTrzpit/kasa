@@ -4,7 +4,8 @@
   @include banner;
   background-image: url("../images/adventure.png");
   filter: brightness(0.8);
-  text-shadow: 0 1px 1px #fff;
+  color: #fff;
+  opacity: 80;
   &__2 {
     @include banner;
     background-image: url("../images/mountain.png");

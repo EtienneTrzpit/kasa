@@ -1,15 +1,23 @@
-.accordions {
-  margin-left: 250px;
-  margin-right: 250px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  &.about {
-    margin-top: 0px;
-    margin-bottom: 0px;
+.arrow-accordion {
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-right: 0.2em solid white;
+  border-top: 0.2em solid white;
+  margin-right: 0.5em;
+  margin-left: 1em;
+  //transition de rotation
+  transition: transform 0.5s ease-in-out;
+  &.up {
+    transform: rotate(-45deg);
+  }
+  &.down {
+    transform: rotate(-225deg);
+    margin-top: -0.5em;
   }
 }
 
@@ -26,52 +34,6 @@
   justify-content: space-between;
   margin-top: 1em;
   padding: 10px 15px;
-}
-
-.arrow-down {
-  cursor: pointer;
-  position: relative;
-  top: 10px;
-  content: "";
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-right: 0.2em solid white;
-  border-top: 0.2em solid white;
-  transform: rotate(-225deg);
-  margin-right: 0.5em;
-  margin-left: 1em;
-  margin-top: -0.5em;
-  //transition de rotation pour faire arrow-up
-  transition: transform 0.5s ease-in-out;
-}
-.arrow-up {
-  cursor: pointer;
-  position: relative;
-  top: 10px;
-  content: "";
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-right: 0.2em solid white;
-  border-top: 0.2em solid white;
-  transform: rotate(-45deg);
-  margin-right: 0.5em;
-  margin-left: 1em;
-  //transition de rotation pour faire arrow-down
-  transition: transform 0.5s ease-in-out;
-}
-
-.accordion.active .accordion-content {
-  height: 200px;
-  padding-top: 20px;
-}
-
-.accordions.about .accordion.active .accordion-content {
-  /*height: auto;*/
-  max-height: 1000px;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .accordion-content {
@@ -92,9 +54,32 @@
   text-align: left;
 }
 
-.accordions.about .accordion-content {
-  height: auto;
-  max-height: 0px;
+.accordion.active .accordion-content {
+  height: 200px;
+  padding-top: 20px;
+}
+
+.mainAbout {
+  & .accordions {
+    margin-left: 250px;
+    margin-right: 250px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    & .accordion-content {
+      height: auto;
+      max-height: 0px;
+    }
+  }
+  & .accordion.active .accordion-content {
+    max-height: 1000px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
