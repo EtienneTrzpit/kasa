@@ -1,5 +1,5 @@
 import logements from "../data/logements.json";
-import { NavLink, useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import "../assets/style/info.scss";
 import "../assets/style/banner.scss";
 import Accordion from "./Accordion";
@@ -19,17 +19,7 @@ export default function MainLocation() {
 
   // si aucun logement n'est trouvé, on affiche un message d'erreur
   if (logementSelectionne === null) {
-    return (
-      <>
-        <h1 className="error-title">404</h1>
-        <p className="error-description">
-          Oups! La page que vous demandez n'existe pas.
-        </p>
-        <NavLink to="/" exact="true" className="error-link">
-          Retourner sur la page d'accueil
-        </NavLink>
-      </>
-    );
+    return <Navigate to="*" />;
   }
   // si un logement est trouvé, on affiche ses informations
   else {

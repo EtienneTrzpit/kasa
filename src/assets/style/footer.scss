@@ -23,6 +23,10 @@
   margin-top: 15px;
 }
 
+.error-title ~ .footer-container {
+  height: 115px;
+}
+
 @media (max-width: 768px) {
   .footer-container {
     width: 104%;
