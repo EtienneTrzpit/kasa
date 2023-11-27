@@ -1,5 +1,5 @@
-import Banner2 from "../components/Banner2";
 import Accordion from "../components/Accordion";
+import "../assets/style/banner.scss";
 
 export default function About() {
   let accordionTitle = ["Fiabilité", "Respect", "Service", "Sécurité"];
@@ -10,19 +10,21 @@ export default function About() {
     "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bienà l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
   ];
   return (
-    <main className="main-about">
-      <Banner2 />
-      <div className="accordions">
-        {accordionTitle.map((title, index) => {
-          return (
-            <Accordion
-              key={index}
-              accordionTitle={title}
-              accordionContent={accordionContent[index]}
-            />
-          );
-        })}
-      </div>
-    </main>
+    <>
+      <div className="banner__2"></div>
+      <main className="main-about">
+        <div className="accordions">
+          {accordionTitle.map((title, index) => {
+            return (
+              <Accordion
+                key={index}
+                accordionTitle={title}
+                accordionContent={accordionContent[index]}
+              />
+            );
+          })}
+        </div>
+      </main>
+    </>
   );
 }

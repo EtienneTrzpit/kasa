@@ -10,13 +10,21 @@ export default function Accordion({ accordionTitle, accordionContent }) {
   const accordion = useRef();
   const location = useLocation();
   useEffect(() => {
+    if (!location) {
+      console.error("location is not defined");
+      return;
+    }
+
+    if (!accordion) {
+      console.error("accordion is not defined");
+      return;
+    }
     if (
       selected === 0 &&
       location.pathname.startsWith("/location") &&
       window.innerWidth > 768
     ) {
       accordion.current.style.height = `200px`;
-      console.log("true");
     } else if (selected === 0) {
       accordion.current.style.height = `${accordion.current.scrollHeight}px`;
     } else {
