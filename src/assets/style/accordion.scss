@@ -11,7 +11,7 @@
   margin-right: 0.5em;
   margin-left: 1em;
   //transition de rotation
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   &.up {
     transform: rotate(-45deg);
   }
@@ -37,9 +37,8 @@
 }
 
 .accordion-content {
-  height: 0px;
   overflow: hidden;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border-radius: 5px;
   background: var(--Gray, #f6f6f6);
   color: #ff6060;
@@ -49,14 +48,14 @@
   font-weight: 400;
   line-height: 142.6%; /* 25.668px */
   overflow: hidden;
-  padding-left: 20px;
-  padding-right: 20px;
   text-align: left;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
-.accordion.active .accordion-content {
-  height: 200px;
-  padding-top: 20px;
+.active .accordion-content {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .main-about {
@@ -70,15 +69,6 @@
     padding: 20px;
     margin-top: 0px;
     margin-bottom: 0px;
-    & .accordion-content {
-      height: auto;
-      max-height: 0px;
-    }
-  }
-  & .accordion.active .accordion-content {
-    max-height: 1000px;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
 }
 
@@ -90,5 +80,15 @@
   }
   .accordion {
     width: 100%;
+  }
+
+  .accordion-content {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .active .accordion-content {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
   }
 }
