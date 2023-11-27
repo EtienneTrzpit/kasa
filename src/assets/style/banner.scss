@@ -3,7 +3,6 @@
 .banner {
   @include banner;
   background-image: url("../images/adventure.png");
-  filter: brightness(0.8);
   color: #fff;
   opacity: 80;
   &__2 {
