@@ -199,8 +199,6 @@
   }
 
   .location-accordions {
-    /*position: absolute;
-    top: 38em;*/
     padding-top: 13em;
     display: flex;
     flex-direction: column;
@@ -211,14 +209,6 @@
 
   .picture {
     width: 32px;
-  }
-
-  .landlord {
-    text-align: center;
-    & > p {
-      margin-right: 0;
-      width: 100%;
-    }
   }
 
   .list-info {
@@ -249,11 +239,12 @@
   }
   .landlord {
     position: absolute;
-    top: 29.8em;
-    left: 11.7em;
+    top: 30.5em;
+    left: 13.5em;
     z-index: 100;
     & p {
       margin-right: 0.5em;
+      line-height: 1em;
     }
   }
 
@@ -273,7 +264,7 @@
   }
   .star {
     position: absolute;
-    top: 21em;
+    top: 21.8em;
     left: 0.5em;
     font-size: 26px;
     z-index: 100;
