@@ -10,7 +10,7 @@ export default function Home() {
   }
   return (
     <>
-      <h1 className="banner">Chez vous, partout et ailleurs</h1>;
+      <h1 className="banner">Chez vous, partout et ailleurs</h1>
       <main>
         <div className="articles">
           {logements.map((logement) => (

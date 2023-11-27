@@ -21,14 +21,20 @@
 
 @media (max-width: 768px) {
   .banner {
+    height: 17vh;
+    margin-top: 3vh;
+    margin-bottom: 0;
     margin-left: 5vw;
     margin-right: 5vw;
-    padding-left: 20px;
-    padding-right: 80px;
+    padding-left: 5vw;
+    padding-right: 16vw;
     font-size: 2em;
+
     &__2 {
       margin-left: 5vw;
       margin-right: 5vw;
+      margin-top: 3vh;
+      height: 17vh;
     }
     &__location {
       margin-left: 20px;
