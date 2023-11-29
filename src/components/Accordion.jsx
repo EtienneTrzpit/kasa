@@ -30,7 +30,7 @@ export default function Accordion({ accordionTitle, accordionContent }) {
     } else {
       accordion.current.style.height = "0px";
     }
-  }, [selected]);
+  }, [selected, location]);
   return (
     <div
       className={selected === 0 ? "accordion active" : "accordion"}
