@@ -26,14 +26,15 @@
   background-color: #ff6060;
   color: #fff;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 2.4vh;
   font-style: normal;
   font-weight: 500;
-  line-height: 142.6%; /* 25.668px */
+  line-height: 142.6%;
   display: flex;
   justify-content: space-between;
-  margin-top: 1em;
-  padding: 10px 15px;
+  align-items: center;
+  height: 5vh;
+  padding: 0.5vh 1vw;
 }
 
 .accordion-content {
@@ -66,9 +67,11 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  & .accordion {
+    margin-bottom: 3vh;
   }
 }
 
