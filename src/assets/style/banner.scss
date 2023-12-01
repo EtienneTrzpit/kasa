@@ -12,7 +12,7 @@
   }
   &__location {
     @include banner;
-    width: 93%;
+    width: calc(100% - 140px);
     object-fit: cover;
     margin-bottom: 1em;
     height: 400px;

@@ -8,7 +8,7 @@
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  height: 209px;
+  height: 19.8vh;
   &__logo {
     margin-bottom: 3vh;
   }
@@ -20,7 +20,11 @@
 
 .main-about + .footer-container {
   margin-top: -2vh;
-  height: 19.8vh;
+}
+
+.error-title ~ .footer-container {
+  margin-top: 10vh;
+  padding-bottom: 6vh;
 }
 
 @media (max-width: 768px) {

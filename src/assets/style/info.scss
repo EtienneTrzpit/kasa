@@ -10,7 +10,7 @@
   & > p {
     color: #ff6060;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 1.2em;
     font-style: normal;
     font-weight: 500;
     line-height: 142.6%; /* 25.668px */
@@ -28,7 +28,7 @@
 .location-title {
   color: #ff6060;
   font-family: Montserrat;
-  font-size: 36px;
+  font-size: 2.5em;
   font-style: normal;
   font-weight: 500;
   line-height: 142.6%; /* 51.336px */
@@ -36,10 +36,7 @@
 }
 
 .location-accordions {
-  margin-top: -1em;
-  & .accordion-title {
-    font-size: 18px;
-  }
+  margin-top: 2vh;
 }
 
 .picture {
@@ -54,7 +51,7 @@
   color: #ff6060;
   text-align: right;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 1.2em;
   font-style: normal;
   font-weight: 500;
   line-height: 142.6%; /* 25.668px */
@@ -78,7 +75,7 @@
     color: #fff;
     text-align: center;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 1em;
     font-style: normal;
     font-weight: 500;
     line-height: 142.6%; /* 19.964px */
@@ -110,23 +107,24 @@
 
 .error-title {
   @include error;
-  font-size: 188px;
+  font-size: 12.5em;
   font-weight: 700;
-  margin-top: 30px;
+  margin-top: 4vh;
+  margin-bottom: 0;
+  transform: scaleX(1.4); // Ajustez la valeur selon vos besoins
 }
 
 .error-description {
   @include error;
-  font-size: 34px;
-  margin-top: -100px;
-  margin-bottom: 225px;
+  font-size: 2em;
+  margin-bottom: 10vh;
 }
 
 .error-link {
   @include error;
-  margin-top: 10px;
   text-decoration: underline;
-  margin-left: 850px;
+  text-align: center;
+  display: block;
 }
 
 .arrow-diaporama {
