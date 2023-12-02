@@ -165,130 +165,85 @@
 }
 
 @media (max-width: 768px) {
-  .location-info {
-    margin-left: 20px;
-    margin-right: 10px;
-    margin-top: -1em;
-    & > p {
-      position: absolute;
-      top: 28em;
-    }
-    & .accordion {
-      margin-top: -0.5em;
-      width: 95%;
-      & + .accordion {
-        margin-bottom: 2em;
-        margin-top: 0.5em;
-      }
-    }
-    & .accordion-content {
-      flex-direction: column;
-      align-items: center;
-    }
+  .arrow-diaporama {
+    padding: 0.5em;
+    top: 14rem;
   }
-
-  .location-presentation {
-    margin-top: 0;
+  .right {
+    right: 10vw;
   }
-
-  .location-title {
-    margin-top: 0;
-    font-size: 24px;
+  .left {
+    left: 10vw;
   }
-
-  .location-accordions {
-    padding-top: 13em;
-    display: flex;
-    flex-direction: column;
-    & .accordion-title {
-      font-size: 14px;
-    }
-  }
-
-  .picture {
-    width: 32px;
-  }
-
-  .list-info {
-    position: absolute;
-    top: 32em;
-    margin-left: -2.5em;
-    margin-bottom: 4em;
-    flex-flow: row wrap;
-    & > li {
-      margin-right: 1em;
-      margin-bottom: 10px;
-      padding: 3px 20px;
-      border-radius: 10px;
-      background: #ff6060;
-      color: #fff;
-      text-align: center;
-      font-family: Montserrat;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 142.6%; /* 19.964px */
-    }
-  }
-
-  .error-title {
-    font-size: 100px;
-    margin-top: 4vh;
-  }
-  .landlord {
-    position: absolute;
-    top: 30.5em;
-    left: 13.5em;
-    z-index: 100;
-    & p {
-      margin-right: 0.5em;
-      line-height: 1em;
-    }
-  }
-
   .banner-text {
     display: none;
   }
-
-  .arrow-diaporama {
-    padding: 9px;
-    top: 14em;
+  .location-info {
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
-  .left {
-    left: 3em;
+  .location-title {
+    font-size: 1.6em;
+    margin-right: -1vw;
+    margin-bottom: 5vh;
+    margin-top: 4vh;
   }
-  .right {
-    right: 3em;
+  .list-info {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-right: -50vw;
+    position: relative;
   }
-  .star {
+  .list-info li {
+    padding: 0.2vh 7vw;
+    font-size: 0.8em;
+    margin-bottom: 1vh;
+  }
+  .rating {
+    position: relative;
+    top: 8vh;
+    right: 45vw;
+  }
+  .landlord {
     position: absolute;
-    top: 21.8em;
-    left: 0.5em;
-    font-size: 26px;
-    z-index: 100;
+    font-size: 1.1em;
+    top: 34rem;
+    right: 5vw;
+    &.bottom {
+      top: 69vh;
+    }
+    &.small-screen {
+      top: 32rem;
+      &.bottom {
+        top: 34rem;
+      }
+    }
+    &.medium-screen {
+      top: 35rem;
+      &.bottom {
+        top: 37rem;
+      }
+    }
+    &.xsmall-screen {
+      top: 33rem;
+      &.bottom {
+        top: 35rem;
+      }
+    }
   }
-  .star + .star {
-    left: 1.5em;
+  .picture {
+    width: 5vh;
   }
-  .star + .star + .star {
-    left: 2.5em;
+  .location-accordions {
+    margin-top: 4vh;
+    flex-direction: column;
+    & .accordion {
+      margin-top: 4vh;
+      width: 100%;
+    }
   }
-  .star + .star + .star + .star {
-    left: 3.5em;
-  }
-  .star + .star + .star + .star + .star {
-    left: 4.5em;
-  }
-
-  .error-description {
-    font-size: 24px;
-    padding-left: 8vw;
-    padding-right: 8vw;
-    margin-top: 0;
-    margin-bottom: 4vh;
-  }
-
-  .error-link {
-    margin-left: 22vw;
+  .error-title {
+    font-size: 7em;
+    margin-top: 6vh;
   }
 }

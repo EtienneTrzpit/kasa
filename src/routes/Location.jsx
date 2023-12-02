@@ -23,6 +23,32 @@ export default function Location() {
   }
   // si un logement est trouvé, on affiche ses informations
   else {
+    function getTitleClass() {
+      let titleClass;
+      switch (true) {
+        case window.innerWidth < 370:
+          titleClass = "landlord xsmall-screen ";
+          break;
+        case window.innerWidth < 389:
+          titleClass = "landlord small-screen";
+          break;
+        case window.innerWidth < 410:
+          titleClass = "landlord small2-screen";
+          break;
+        case window.innerWidth < 432:
+          titleClass = "landlord medium-screen";
+          break;
+        default:
+          titleClass = "landlord";
+          break;
+      }
+      if (logementSelectionne.title.length > 30 && window.innerWidth < 380) {
+        titleClass += " bottom";
+      } else if (logementSelectionne.title.length > 32) {
+        titleClass += " bottom";
+      }
+      return titleClass;
+    }
     return (
       <main className="main-location">
         <div id="banner">
@@ -30,7 +56,7 @@ export default function Location() {
         </div>
         <div className="location-info location-presentation">
           <h1 className="location-title">{logementSelectionne.title}</h1>
-          <span className="landlord">
+          <span className={getTitleClass()}>
             <p>{logementSelectionne.host["name"]}</p>
             <img
               className="picture"
