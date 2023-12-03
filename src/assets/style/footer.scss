@@ -29,9 +29,9 @@
 
 @media (max-width: 768px) {
   .footer-container {
-    width: 100%;
-    margin-top: 4vh;
-    height: 31vh;
+    position: relative;
+    bottom: 0;
+    height: 25vh;
     &__logo {
       margin-bottom: 5px;
     }
@@ -43,12 +43,8 @@
     }
   }
 
-  .error-title ~ .footer-container,
-  .main-about + .footer-container {
-    position: relative;
-    bottom: 0;
-    margin-top: -2vh;
-    height: 25vh;
+  .main-home + .footer-container {
+    margin-top: 2vh;
   }
 
   .error-title ~ .footer-container {

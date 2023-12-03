@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <h1 className="banner">Chez vous, partout et ailleurs</h1>
-      <main>
+      <main className="main-home">
         <div className="articles">
           {logements.map((logement) => (
             <Card title={logement.title} key={logement.title} />
