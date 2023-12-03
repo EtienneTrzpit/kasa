@@ -191,7 +191,6 @@
   .list-info {
     flex-wrap: wrap;
     flex-direction: row;
-    margin-right: -50vw;
     position: relative;
   }
   .list-info li {
@@ -199,43 +198,19 @@
     font-size: 0.8em;
     margin-bottom: 1vh;
   }
-  .rating {
-    position: relative;
-    top: 8vh;
-    right: 45vw;
-  }
-  .landlord {
-    position: absolute;
-    font-size: 1.1em;
-    top: 34rem;
-    right: 5vw;
-    &.bottom {
-      top: 69vh;
-    }
-    &.small-screen {
-      top: 32rem;
-      &.bottom {
-        top: 34rem;
-      }
-    }
-    &.medium-screen {
-      top: 35rem;
-      &.bottom {
-        top: 37rem;
-      }
-    }
-    &.xsmall-screen {
-      top: 33rem;
-      &.bottom {
-        top: 35rem;
-      }
-    }
+  .location-smartphone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2vw;
+    margin-right: 6vw;
+    margin-top: -2vh;
   }
   .picture {
     width: 5vh;
   }
   .location-accordions {
-    margin-top: 4vh;
+    margin-top: -4vh;
     flex-direction: column;
     & .accordion {
       margin-top: 4vh;

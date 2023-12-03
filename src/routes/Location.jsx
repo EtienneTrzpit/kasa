@@ -16,39 +16,12 @@ export default function Location() {
       images = logement.pictures;
     }
   }
-
   // si aucun logement n'est trouvé, on affiche un message d'erreur
   if (logementSelectionne === null) {
     return <Navigate to="*" />;
   }
   // si un logement est trouvé, on affiche ses informations
   else {
-    function getTitleClass() {
-      let titleClass;
-      switch (true) {
-        case window.innerWidth < 370:
-          titleClass = "landlord xsmall-screen ";
-          break;
-        case window.innerWidth < 389:
-          titleClass = "landlord small-screen";
-          break;
-        case window.innerWidth < 410:
-          titleClass = "landlord small2-screen";
-          break;
-        case window.innerWidth < 432:
-          titleClass = "landlord medium-screen";
-          break;
-        default:
-          titleClass = "landlord";
-          break;
-      }
-      if (logementSelectionne.title.length > 30 && window.innerWidth < 380) {
-        titleClass += " bottom";
-      } else if (logementSelectionne.title.length > 32) {
-        titleClass += " bottom";
-      }
-      return titleClass;
-    }
     return (
       <main className="main-location">
         <div id="banner">
@@ -56,14 +29,16 @@ export default function Location() {
         </div>
         <div className="location-info location-presentation">
           <h1 className="location-title">{logementSelectionne.title}</h1>
-          <span className={getTitleClass()}>
-            <p>{logementSelectionne.host["name"]}</p>
-            <img
-              className="picture"
-              src={logementSelectionne.host["picture"]}
-              alt={logementSelectionne.host["name"]}
-            />
-          </span>
+          {window.innerWidth > 768 ? (
+            <span className="landlord">
+              <p>{logementSelectionne.host["name"]}</p>
+              <img
+                className="picture"
+                src={logementSelectionne.host["picture"]}
+                alt={logementSelectionne.host["name"]}
+              />
+            </span>
+          ) : null}
         </div>
         <div className="location-info">
           <p>{logementSelectionne.location}</p>
@@ -75,25 +50,57 @@ export default function Location() {
               return <li key={tag}>{tag}</li>;
             })}
           </ul>
-          <span className="rating">
-            {/* boucle pour afficher les étoiles remplis correspondant au rating du logement */}
-            {Array.from({ length: logementSelectionne.rating }).map(
-              (_, index) => (
-                <span key={index} className="star filled">
-                  &#9733;
-                </span>
-              )
-            )}
-            {/* boucle pour afficher les étoiles vides correspondant au rating du logement */}
-            {Array.from({ length: 5 - logementSelectionne.rating }).map(
-              (_, index) => (
-                <span key={index} className="star empty">
-                  &#9734;
-                </span>
-              )
-            )}
-          </span>
+          {window.innerWidth >= 768 ? (
+            <span className="rating">
+              {/* boucle pour afficher les étoiles remplis correspondant au rating du logement */}
+              {Array.from({ length: logementSelectionne.rating }).map(
+                (_, index) => (
+                  <span key={index} className="star filled">
+                    &#9733;
+                  </span>
+                )
+              )}
+              {/* boucle pour afficher les étoiles vides correspondant au rating du logement */}
+              {Array.from({ length: 5 - logementSelectionne.rating }).map(
+                (_, index) => (
+                  <span key={index} className="star empty">
+                    &#9734;
+                  </span>
+                )
+              )}
+            </span>
+          ) : null}
         </div>
+        {window.innerWidth < 768 ? (
+          <div className="location-smartphone">
+            <span className="rating">
+              {/* boucle pour afficher les étoiles remplis correspondant au rating du logement */}
+              {Array.from({ length: logementSelectionne.rating }).map(
+                (_, index) => (
+                  <span key={index} className="star filled">
+                    &#9733;
+                  </span>
+                )
+              )}
+              {/* boucle pour afficher les étoiles vides correspondant au rating du logement */}
+              {Array.from({ length: 5 - logementSelectionne.rating }).map(
+                (_, index) => (
+                  <span key={index} className="star empty">
+                    &#9734;
+                  </span>
+                )
+              )}
+            </span>
+            <span className="landlord">
+              <p>{logementSelectionne.host["name"]}</p>
+              <img
+                className="picture"
+                src={logementSelectionne.host["picture"]}
+                alt={logementSelectionne.host["name"]}
+              />
+            </span>
+          </div>
+        ) : null}
         <div className="location-info location-accordions">
           <Accordion
             accordionTitle={["Description"]}
