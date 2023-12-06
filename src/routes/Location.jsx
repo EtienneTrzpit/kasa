@@ -50,7 +50,7 @@ export default function Location() {
               return <li key={tag}>{tag}</li>;
             })}
           </ul>
-          {window.innerWidth >= 768 ? (
+          {window.innerWidth > 768 ? (
             <span className="rating">
               {/* boucle pour afficher les étoiles remplis correspondant au rating du logement */}
               {Array.from({ length: logementSelectionne.rating }).map(
@@ -71,7 +71,7 @@ export default function Location() {
             </span>
           ) : null}
         </div>
-        {window.innerWidth < 768 ? (
+        {window.innerWidth <= 768 ? (
           <div className="location-smartphone">
             <span className="rating">
               {/* boucle pour afficher les étoiles remplis correspondant au rating du logement */}
