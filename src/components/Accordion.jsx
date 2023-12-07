@@ -24,7 +24,7 @@ export default function Accordion({ accordionTitle, accordionContent }) {
       location.pathname.startsWith("/location") &&
       window.innerWidth > 768
     ) {
-      accordion.current.style.height = `200px`;
+      accordion.current.style.height = `250px`;
     } else if (selected === 0) {
       accordion.current.style.height = `${accordion.current.scrollHeight}px`;
     } else {
