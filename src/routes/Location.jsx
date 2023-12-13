@@ -11,7 +11,7 @@ export default function Location() {
   let images;
   // boucle sur le tableau logements pour trouver le logement dont l'id correspond à celui passé dans l'url
   for (let logement of logements) {
-    if (logement.title === id) {
+    if (logement.id === id) {
       logementSelectionne = logement;
       images = logement.pictures;
     }

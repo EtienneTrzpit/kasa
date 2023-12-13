@@ -1,5 +1,6 @@
 .article {
   border-radius: 10px;
+  overflow: hidden;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
@@ -9,6 +10,15 @@
   grid-area: span 1 / span 1;
   height: 22.5vw;
   position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Noir avec 50% d'opacité */
+  }
   &-title {
     color: #fff;
     font-family: Montserrat;

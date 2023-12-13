@@ -14,7 +14,12 @@ export default function Home() {
       <main className="main-home">
         <div className="articles">
           {logements.map((logement) => (
-            <Card title={logement.title} key={logement.title} />
+            <Card
+              title={logement.title}
+              id={logement.id}
+              cover={logement.cover}
+              key={logement.id}
+            />
           ))}
         </div>
       </main>
