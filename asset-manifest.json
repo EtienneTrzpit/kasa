@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kasa/static/css/main.f95db4f1.css",
+    "main.js": "/kasa/static/js/main.67cd6955.js",
+    "static/js/787.0ce615c0.chunk.js": "/kasa/static/js/787.0ce615c0.chunk.js",
+    "static/media/mountain.png": "/kasa/static/media/mountain.9b95ada7a30d67f2fb6c.png",
+    "static/media/adventure.png": "/kasa/static/media/adventure.a7d437b0e3da529fbbe8.png",
+    "index.html": "/kasa/index.html",
+    "main.f95db4f1.css.map": "/kasa/static/css/main.f95db4f1.css.map",
+    "main.67cd6955.js.map": "/kasa/static/js/main.67cd6955.js.map",
+    "787.0ce615c0.chunk.js.map": "/kasa/static/js/787.0ce615c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f95db4f1.css",
+    "static/js/main.67cd6955.js"
+  ]
+}
