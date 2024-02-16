@@ -12,9 +12,9 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/location/:id" element={<Location />} />
+        <Route path="/kasa" element={<Home />} />
+        <Route path="/kasa/about" element={<About />} />
+        <Route path="/kasa/location/:id" element={<Location />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
